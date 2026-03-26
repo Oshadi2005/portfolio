@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oshadi Whyshni Kumaravel | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Oshadi<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Portfolio</a></li>
+                <li><a href="#education" class="nav-link">Journey</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero fade-in">
+        <div class="hero-content">
+            <p class="greeting">Hi, I'm</p>
+            <h1 class="name">Oshadi Whyshni Kumaravel</h1>
+            <h2 class="tagline">Computer Science Undergraduate | UI/UX & Web Developer</h2>
+            <p class="intro">
+                I’m passionate about designing and developing user-friendly digital experiences.
+                I enjoy combining creativity and technology to build clean, responsive, and meaningful solutions.
+            </p>
+
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                <a href="files/Oshadi_CV.pdf" download class="btn outline-btn">Download CV</a>
+            </div>
+        </div>
+
+        <div class="hero-img-container">
+            <div class="blob-shape">
+                <img src="images/oshadi_profile.jpg" alt="Oshadi Profile Image" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & SKILLS -->
+    <section id="about" class="about section padding">
+        <div class="container fade-in">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a passionate Computer Science undergraduate with a strong interest in UI/UX design,
+                        web development, and creative problem solving. I enjoy creating digital experiences that
+                        are both visually appealing and easy to use.
+                    </p>
+
+                    <p>
+                        My career goal is to grow as a UI/UX designer and web developer while gaining practical
+                        industry experience. I also enjoy creativity-based work such as graphic design, photography,
+                        and content creation.
+                    </p>
+
+                    <h3 class="sub-heading" style="margin-top: 30px; font-size: 1.5rem; color: var(--primary-dark);">Technical Skills</h3>
+                    <div class="interests" style="margin-top: 15px;">
+                        <span class="interest-tag"><i class="fas fa-laptop-code"></i> Web Dev (HTML, CSS, JS, PHP)</span>
+                        <span class="interest-tag"><i class="fab fa-figma"></i> UI/UX Design (Figma)</span>
+                        <span class="interest-tag"><i class="fas fa-code"></i> Python, Java, C#</span>
+                        <span class="interest-tag"><i class="fas fa-paint-brush"></i> Canva, Photoshop, Illustrator</span>
+                        <span class="interest-tag"><i class="fab fa-github"></i> Git & GitHub</span>
+                        <span class="interest-tag"><i class="fas fa-mobile-screen-button"></i> Responsive Design</span>
+                    </div>
+
+                    <h3 class="sub-heading" style="margin-top: 30px; font-size: 1.5rem; color: var(--primary-dark);">Soft Skills</h3>
+                    <div class="interests" style="margin-top: 15px;">
+                        <span class="interest-tag"><i class="fas fa-comments"></i> Communication</span>
+                        <span class="interest-tag"><i class="fas fa-lightbulb"></i> Creativity</span>
+                        <span class="interest-tag"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+                        <span class="interest-tag"><i class="fas fa-users"></i> Teamwork</span>
+                        <span class="interest-tag"><i class="fas fa-rotate"></i> Adaptability</span>
+                        <span class="interest-tag"><i class="fas fa-clock"></i> Time Management</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects section padding">
+        <div class="container fade-in">
+            <h2 class="section-title">My <span>Projects</span></h2>
+            
+            <!-- Web & Mobile Development -->
+            <div class="project-category">
+                <h3 class="category-title">Web & Mobile Development</h3>
+                <div class="project-grid">
+                    
+                    <div class="project-card">
+                        <video class="project-media" autoplay loop muted playsinline>
+                            <source src="videos/Website 1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="project-info">
+                            <h3>1. Hospital Website</h3>
+                            <p>A responsive hospital website designed to provide users with easy access to healthcare services, doctor information, pharmacy details, and online patient registration through a clear and user-friendly interface.</p>
+                            <p><strong>Technologies:</strong> HTML, CSS</p>
+                            <p style="margin-bottom: 5px;"><strong>Key Features:</strong></p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;">
+                                <li style="margin-bottom: 5px;">Patient registration form with input validation</li>
+                                <li style="margin-bottom: 5px;">Information pages for hospital services and doctors</li>
+                                <li style="margin-bottom: 5px;">Pharmacy section for medicine details</li>
+                                <li style="margin-bottom: 5px;">Responsive design optimized for mobile and desktop devices</li>
+                            </ul>
+                            <div class="project-links" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                                <a href="videos/Website%201.mp4" target="_blank" class="btn small-btn outline-btn"><i class="fas fa-play"></i> View Demo</a>
+                                <a href="https://github.com/Oshadi2005/DOCMEDhospital" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <video class="project-media" autoplay loop muted playsinline>
+                            <source src="videos/Website 2.mp4" type="video/mp4">
+                        </video>
+                        <div class="project-info">
+                            <h3>2. Bake Shop Ordering Website</h3>
+                            <p>An e-commerce style bake shop website that allows users to browse products and place orders through a responsive and user-friendly interface. The system supports dynamic interactions and order handling to enhance the user experience.</p>
+                            <p><strong>Technologies:</strong> PHP, Tailwind CSS, HTML, JavaScript</p>
+                            <p style="margin-bottom: 5px;"><strong>Key Features:</strong></p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;">
+                                <li style="margin-bottom: 5px;">Product browsing and ordering functionality</li>
+                                <li style="margin-bottom: 5px;">Responsive and user-friendly interface</li>
+                                <li style="margin-bottom: 5px;">Dynamic content handling using PHP</li>
+                                <li style="margin-bottom: 5px;">Modern UI design using Tailwind CSS</li>
+                            </ul>
+                            <div class="project-links" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                                <a href="videos/Website%202.mp4" target="_blank" class="btn small-btn outline-btn"><i class="fas fa-play"></i> View Demo</a>
+                                <a href="https://github.com/Oshadi2005/yummilicious" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <video class="project-media" autoplay loop muted playsinline>
+                            <source src="videos/Website 3.mp4" type="video/mp4">
+                        </video>
+                        <div class="project-info">
+                            <h3>3. Yummilicious &ndash; Bake Shop Ordering System (Laravel Project)</h3>
+                            <p>A web-based bake shop ordering system developed using the Laravel framework, enabling users to manage products and place orders through a structured and secure web application.</p>
+                            <p><strong>Technologies:</strong> PHP (Laravel), Tailwind CSS, HTML, JavaScript</p>
+                            <p style="margin-bottom: 5px;"><strong>Key Features:</strong></p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;">
+                                <li style="margin-bottom: 5px;">Product listing and order management</li>
+                                <li style="margin-bottom: 5px;">Backend functionality using Laravel framework</li>
+                                <li style="margin-bottom: 5px;">Responsive UI/UX design</li>
+                                <li style="margin-bottom: 5px;">Structured web application architecture</li>
+                            </ul>
+                            <div class="project-links" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                                <a href="videos/Website%203.mp4" target="_blank" class="btn small-btn outline-btn"><i class="fas fa-play"></i> View Demo</a>
+                                <a href="https://github.com/Oshadi2005/yummilicious-ssp2" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="project-category">
+                <h3 class="category-title">UI/UX Design</h3>
+                <div class="project-grid">
+
+                    <div class="project-card">
+                        <img src="images/Figma1.png" alt="UI/UX Design 1" class="project-media">
+                        <div class="project-info">
+                            <h3>1. Yummilicious &ndash; Bake Shop Website UI/UX Design</h3>
+                            <p>A modern and visually appealing e-commerce interface designed for an online bake shop, enabling users to browse products, manage orders, and complete purchases through a smooth and engaging user experience.</p>
+                            <p><strong>Tools:</strong> Figma, UI/UX Design, Web Interface Design</p>
+                            <p style="margin-bottom: 5px;"><strong>Key Features:</strong></p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;">
+                                <li style="margin-bottom: 5px;">Full website layout including Home, About Us, Testimonials, and Order pages</li>
+                                <li style="margin-bottom: 5px;">Product listing, cart, and checkout interface design</li>
+                                <li style="margin-bottom: 5px;">Admin dashboard screens for managing customers and products</li>
+                                <li style="margin-bottom: 5px;">Clean and responsive layout optimized for usability</li>
+                                <li style="margin-bottom: 5px;">Consistent branding and visual hierarchy</li>
+                            </ul>
+                            <div class="project-links" style="text-align: center;">
+                                <a href="https://www.figma.com/design/fFl5HQu42OokC33TGm5YIw/Yummilicious--project1-?t=ovMMagZRtUgaAduf-1" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-figma"></i> View Prototype</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/Figma2.png" alt="UI/UX Design 2" class="project-media">
+                        <div class="project-info">
+                            <h3>2. Kuveni &ndash; Mobile Application UI/UX Design</h3>
+                            <p>A mobile application interface designed to support women’s safety, personal growth, and community connection through structured navigation and accessible features. The design emphasizes empowerment, clarity, and user engagement.</p>
+                            <p><strong>Tools:</strong> Figma, Mobile UI Design, Prototyping</p>
+                            <p style="margin-bottom: 5px;"><strong>Key Features:</strong></p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;">
+                                <li style="margin-bottom: 5px;">User onboarding and authentication flow (Sign-up, OTP verification)</li>
+                                <li style="margin-bottom: 5px;">Dashboard and feature navigation screens</li>
+                                <li style="margin-bottom: 5px;">Engaging illustrations and modern mobile UI components</li>
+                                <li style="margin-bottom: 5px;">Clear user journey from registration to feature interaction</li>
+                                <li style="margin-bottom: 5px;">Accessibility-focused design and intuitive user experience</li>
+                            </ul>
+                            <div class="project-links" style="text-align: center;">
+                                <a href="https://www.figma.com/design/NN6CGLzeYsPJykP5TxnShu/Hersafe--project-2-?node-id=0-1&t=ovMMagZRtUgaAduf-1" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-figma"></i> View Prototype</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/Figma3.png" alt="UI/UX Design 3" class="project-media">
+                        <div class="project-info">
+                            <h3>3. HerSafe &ndash; Mobile Application UI/UX Design</h3>
+                            <p>A user-centered mobile application interface designed to enhance personal safety through intuitive navigation, emergency features, and accessible user flows. The design focuses on simplicity, clarity, and quick interaction during emergency situations.</p>
+                            <p><strong>Tools:</strong> Figma, UI/UX Design Principles, Prototyping</p>
+                            <p style="margin-bottom: 5px;"><strong>Key Features:</strong></p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px;">
+                                <li style="margin-bottom: 5px;">Complete mobile user flow including onboarding, login, and dashboard screens</li>
+                                <li style="margin-bottom: 5px;">Emergency safety interface with quick-access functionality</li>
+                                <li style="margin-bottom: 5px;">Consistent color palette and typography for accessibility and usability</li>
+                                <li style="margin-bottom: 5px;">Responsive mobile-first design with user-friendly navigation</li>
+                                <li style="margin-bottom: 5px;">Wireframes and high-fidelity UI mockups</li>
+                            </ul>
+                            <div class="project-links" style="text-align: center;">
+                                <a href="https://www.figma.com/design/ZZp6yhJwExPhECrADrldus/Herway--project-3-?node-id=0-1&t=ovMMagZRtUgaAduf-1" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-figma"></i> View Prototype</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Canva Posters & Presentations -->
+            <div class="project-category">
+                <h3 class="category-title">Graphic Design (Canva)</h3>
+                <div class="project-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto;">
+                    
+                    <!-- Canva Image 1 -->
+                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                        <img src="images/poster 1.png" alt="Canva Design 1" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
+                    </div>
+
+                    <!-- Canva Image 2 -->
+                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                        <img src="images/Poster 2.png" alt="Canva Design 2" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
+                    </div>
+
+                    <!-- Canva Image 3 -->
+                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                        <img src="images/Poster 3.png" alt="Canva Design 3" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
+                    </div>
+
+                    <!-- Canva Image 4 -->
+                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                        <img src="images/Poster 4.png" alt="Canva Design 4" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
+                    </div>
+
+                </div>
+
+                <!-- Centered Link -->
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://www.canva.com/design/DAHDjvAAbCU/aIzw5mVoMbHBYlQGaBshtQ/edit?utm_content=DAHDjvAAbCU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn primary-btn">Click here to view more</a>
+                </div>
+            </div>
+    </section>
+
+    <!-- EDUCATION & LEADERSHIP -->
+    <section id="education" class="education section padding">
+        <div class="container fade-in">
+            <h2 class="section-title">My <span>Journey</span></h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; max-width: 1000px; margin: 0 auto; margin-top: 40px;">
+
+                <!-- Education Column -->
+                <div>
+                    <h3 style="font-size: 1.6rem; color: var(--heading-color); margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
+                        <span style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--primary-light); color: var(--primary-color);"><i class="fas fa-graduation-cap"></i></span> Education
+                    </h3>
+                    
+                    <div style="position: relative; padding-left: 25px; border-left: 2px solid var(--primary-light);">
+                        
+                        <div style="position: relative; margin-bottom: 35px;">
+                            <div style="position: absolute; left: -35px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 4px solid var(--bg-color); box-sizing: content-box;"></div>
+                            <h4 style="font-size: 1.25rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">BSc (Hons) Computer Science</h4>
+                            <p style="color: var(--primary-color); font-size: 0.9rem; font-weight: 600; margin-bottom: 5px;">2024 - Present | <span style="font-weight: 400; color: var(--text-light);">APIIT, University of Staffordshire, UK</span></p>
+                            <p style="color: var(--text-main); font-size: 0.95rem; margin-top: 8px;"><strong>Modules:</strong> Web Development, UI/UX Design, Software Engineering, Databases</p>
+                        </div>
+                        
+                        <div style="position: relative; margin-bottom: 35px;">
+                            <div style="position: absolute; left: -35px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 4px solid var(--bg-color); box-sizing: content-box;"></div>
+                            <h4 style="font-size: 1.25rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Computing General Foundation</h4>
+                            <p style="color: var(--primary-color); font-size: 0.9rem; font-weight: 600; margin-bottom: 5px;">March - July 2024 | <span style="font-weight: 400; color: var(--text-light);">APIIT</span></p>
+                            <p style="color: var(--text-main); font-size: 0.95rem; margin-top: 8px;">Computing Mathematics: <strong>A</strong> | Programming & Web Dev: <strong>B</strong></p>
+                        </div>
+                        
+                        <div style="position: relative; margin-bottom: 35px;">
+                            <div style="position: absolute; left: -35px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 4px solid var(--bg-color); box-sizing: content-box;"></div>
+                            <h4 style="font-size: 1.25rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Int. Foundation Diploma in Business</h4>
+                            <p style="color: var(--primary-color); font-size: 0.9rem; font-weight: 600; margin-bottom: 5px;">2022 - 2023 | <span style="font-weight: 400; color: var(--text-light);">BMS, Sri Lanka</span></p>
+                            <p style="color: var(--text-main); font-size: 0.95rem; margin-top: 8px;">Grade: <strong>Merit</strong></p>
+                        </div>
+                        
+                        <div style="position: relative;">
+                            <div style="position: absolute; left: -35px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 4px solid var(--bg-color); box-sizing: content-box;"></div>
+                            <h4 style="font-size: 1.25rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Ordinary Level (Cambridge Cur.)</h4>
+                            <p style="color: var(--primary-color); font-size: 0.9rem; font-weight: 600;">2009 - 2021 | <span style="font-weight: 400; color: var(--text-light);">OKI International School</span></p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Leadership Column -->
+                <div>
+                    <h3 style="font-size: 1.6rem; color: var(--heading-color); margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
+                        <span style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--primary-light); color: var(--secondary-color);"><i class="fas fa-briefcase"></i></span> Leadership & Activities
+                    </h3>
+                    
+                    <div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="font-size: 1.15rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Technical & IT Support Team Member</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Hult Prize Organising Committee</p>
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="font-size: 1.15rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Head of Designing</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">APEH Hub</p>
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="font-size: 1.15rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Treasurer</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Media & Broadcasting Team</p>
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="font-size: 1.15rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">APEH Ambassador</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">APIIT</p>
+                        </div>
+
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="font-size: 1.15rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Active Volunteer</h4>
+                            <p style="color: var(--text-main); font-size: 0.95rem; margin-top: 5px;">Major univ. events (APEH, AIRC, Career Craft, Rotaract, FCS)</p>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size: 1.15rem; color: var(--heading-color); margin-bottom: 5px; font-weight: 600;">Athlete & Swimmer</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">Competitive Sports</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="certifications section padding bg-light">
+    <div class="container fade-in">
+        <h2 class="section-title">My <span>Certifications</span></h2>
+
+        <div class="cert-grid">
+
+            <div class="cert-card">
+                <img src="images/python-cert.png" alt="Python Certificate" class="cert-img">
+                <h3>Python Essential Training</h3>
+                <p class="cert-provider">LinkedIn Learning</p>
+                <p>Python programming fundamentals and problem solving.</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="images/agile-cert.png" alt="Agile Certificate" class="cert-img">
+                <h3>PMI Agile Certified Practitioner (PMI-ACP)</h3>
+                <p class="cert-provider">LinkedIn Learning</p>
+                <p>Agile project management concepts and frameworks.</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="images/database-cert.png" alt="Database Certificate" class="cert-img">
+                <h3>Relational Databases Essential Training</h3>
+                <p class="cert-provider">LinkedIn Learning</p>
+                <p>Database design, tables, relationships and queries.</p>
+            </div>
+            <div class="cert-card">
+                <img src="images/git-cert.png" alt="Git Essential Training Certificate" class="cert-img">
+                <h3>Git Essential Training (2023)</h3>
+                <p class="cert-provider">LinkedIn Learning</p>
+                <p>Skills: Git, Version Control, Collaboration</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="images/figma-basics-cert.png" alt="Figma Essential Training Certificate" class="cert-img">
+                <h3>Figma Essential Training: The Basics</h3>
+                <p class="cert-provider">LinkedIn Learning</p>
+                <p>Skills: Figma Interface Design, Layouts, UI Basics</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="images/figma-cert.png" alt="Figma Certificate" class="cert-img">
+                <h3>Figma for UX Design</h3>
+                <p class="cert-provider">LinkedIn Learning</p>
+                <p>UI/UX design, wireframes, prototyping and interface design.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- COMPETITIONS -->
+<section id="competitions" class="competitions section padding">
+    <div class="container fade-in">
+        <h2 class="section-title">Competitions <span>& Activities</span></h2>
+
+        <div class="competition-grid">
+
+            <div class="competition-card">
+                <h3>DESIGNATHON</h3>
+                <p>APIIT (UI Divas)</p>
+                <p><strong>1st Place</strong></p>
+            </div>
+
+            <div class="competition-card">
+                <h3>IDEALIZE</h3>
+                <p>University of Moratuwa (PixcelCoders)</p>
+                <p><strong>Finalist</strong></p>
+            </div>
+
+            <div class="competition-card">
+                <h3>FUTURUM 2.0</h3>
+                <p>University of Sri Jayewardenepura (Innoventrix)</p>
+                <p><strong>Finalist</strong></p>
+            </div>
+
+            <div class="competition-card">
+                <h3>ARTEMIA 1.0</h3>
+                <p>University of Sri Jayewardenepura (UI Pixels)</p>
+                <p><strong>Finalist</strong></p>
+            </div>
+
+            <div class="competition-card">
+                <h3>CTF</h3>
+                <p>APIIT (RedHats)</p>
+                <p>Participated</p>
+            </div>
+
+            <div class="competition-card">
+                <h3>ENIGMA 2.0</h3>
+                <p>University of Moratuwa (TrioMatrix)</p>
+                <p>Participated</p>
+            </div>
+
+            <div class="competition-card">
+                <h3>HACKX 10</h3>
+                <p>University of Kelaniya</p>
+                <p>Participated</p>
+            </div>
+
+            <div class="competition-card">
+                <h3>24hr Hackathon</h3>
+                <p>APIIT</p>
+                <p>Participated</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section padding">
+        <div class="container fade-in">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>
+                        Whether you have a question, a project idea, or just want to say hi,
+                        I’d love to hear from you.
+                    </p>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>0762560705</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>oshadikumaravel@gmail.com</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Dehiwala, Sri Lanka</span>
+                    </div>
+
+                    <div class="contact-item" style="margin-top: 20px;">
+                        <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/oshadi-whyshni-37726b323/" target="_blank" style="font-weight: 500; transition: color 0.3s; color: var(--text-main);" onmouseover="this.style.color='var(--primary-dark)'" onmouseout="this.style.color='var(--text-main)'">linkedin.com/in/oshadi-whyshni</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/oshadi2005" target="_blank" style="font-weight: 500; transition: color 0.3s; color: var(--text-main);" onmouseover="this.style.color='var(--primary-dark)'" onmouseout="this.style.color='var(--text-main)'">github.com/oshadi2005</a>
+                    </div>
+                </div>
+
+                <form class="contact-form"
+                    onsubmit="event.preventDefault(); alert('Thank you for reaching out! This is a demo form.');">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn primary-btn submit-btn">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Oshadi Whyshni Kumaravel. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
