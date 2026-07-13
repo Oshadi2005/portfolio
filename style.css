@@ -1,25 +1,25 @@
 /* Google Fonts imported via <link> in index.html (Outfit + JetBrains Mono) */
 
-/* CSS Variables — Dark "AI Systems Developer" Theme */
+/* CSS Variables — Dark Emerald "AI Systems Developer" Theme */
 :root {
-    --primary-color: #fb7185;
-    --primary-light: rgba(251, 113, 133, 0.14);
-    --primary-dark: #fda4af;
-    --secondary-color: #34d399;
-    --secondary-light: rgba(52, 211, 153, 0.14);
+    --primary-color: #10b981;
+    --primary-light: rgba(16, 185, 129, 0.14);
+    --primary-dark: #34d399;
+    --secondary-color: #047857;
+    --secondary-light: rgba(4, 120, 87, 0.18);
     --secondary-dark: #6ee7b7;
-    --bg-color: #060a13;
-    --bg-light: #0d1420;
-    --surface: rgba(255, 255, 255, 0.035);
-    --surface-strong: rgba(255, 255, 255, 0.06);
-    --border-glass: rgba(255, 255, 255, 0.09);
-    --text-main: #cbd5e1;
-    --text-light: #8ea0b5;
-    --heading-color: #f1f5f9;
+    --bg-color: #05100c;
+    --bg-light: #081a13;
+    --surface: rgba(16, 185, 129, 0.045);
+    --surface-strong: rgba(16, 185, 129, 0.08);
+    --border-glass: rgba(16, 185, 129, 0.14);
+    --text-main: #cbd5cf;
+    --text-light: #85a396;
+    --heading-color: #eefcf5;
     --white: #f8fafc;
-    --gradient-accent: linear-gradient(135deg, #fb7185, #34d399);
-    --shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
-    --glow: 0 0 45px rgba(251, 113, 133, 0.22);
+    --gradient-accent: linear-gradient(135deg, #047857, #10b981);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --glow: 0 0 45px rgba(16, 185, 129, 0.28);
     --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -49,9 +49,9 @@ body::before {
     inset: 0;
     z-index: -2;
     background:
-        radial-gradient(600px circle at 15% 20%, rgba(251, 113, 133, 0.10), transparent 60%),
-        radial-gradient(700px circle at 85% 15%, rgba(52, 211, 153, 0.10), transparent 60%),
-        radial-gradient(600px circle at 50% 90%, rgba(251, 113, 133, 0.06), transparent 60%);
+        radial-gradient(600px circle at 15% 20%, rgba(16, 185, 129, 0.10), transparent 60%),
+        radial-gradient(700px circle at 85% 15%, rgba(4, 120, 87, 0.10), transparent 60%),
+        radial-gradient(600px circle at 50% 90%, rgba(16, 185, 129, 0.06), transparent 60%);
     animation: auroraShift 22s ease-in-out infinite alternate;
 }
 
@@ -118,7 +118,7 @@ ul {
     width: 0%;
     height: 3px;
     background: var(--gradient-accent);
-    box-shadow: 0 0 12px rgba(251, 113, 133, 0.6);
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
     z-index: 2000;
     transition: width 0.1s ease-out;
 }
@@ -133,7 +133,7 @@ ul {
     margin-left: -250px;
     margin-top: -250px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(251, 113, 133, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
     pointer-events: none;
     z-index: 1;
     opacity: 0;
@@ -185,14 +185,14 @@ ul {
 
 .primary-btn {
     background: var(--gradient-accent);
-    color: #06121a;
+    color: #04140d;
     font-weight: 600;
-    box-shadow: 0 8px 25px rgba(251, 113, 133, 0.25);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25);
 }
 
 .primary-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(52, 211, 153, 0.35), var(--glow);
+    box-shadow: 0 15px 40px rgba(4, 120, 87, 0.35), var(--glow);
 }
 
 .secondary-btn {
@@ -203,7 +203,7 @@ ul {
 
 .secondary-btn:hover {
     background: var(--primary-color);
-    color: #06121a;
+    color: #04140d;
     transform: translateY(-3px);
     box-shadow: var(--glow);
 }
@@ -220,7 +220,7 @@ ul {
 
 .outline-btn:hover {
     background: var(--primary-color);
-    color: #06121a;
+    color: #04140d;
     box-shadow: var(--glow);
 }
 
@@ -231,7 +231,7 @@ ul {
     left: 0;
     width: 100%;
     padding: 20px 0;
-    background-color: rgba(6, 10, 19, 0.75);
+    background-color: rgba(5, 16, 12, 0.75);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-glass);
@@ -241,7 +241,7 @@ ul {
 
 .navbar.scrolled {
     padding: 14px 0;
-    background-color: rgba(6, 10, 19, 0.92);
+    background-color: rgba(5, 16, 12, 0.92);
 }
 
 .nav-container {
@@ -435,7 +435,7 @@ ul {
     justify-content: center;
     align-items: center;
     animation: morph 8s ease-in-out infinite;
-    box-shadow: inset 0 0 50px rgba(251, 113, 133, 0.15), var(--shadow), 0 0 60px rgba(251, 113, 133, 0.12);
+    box-shadow: inset 0 0 50px rgba(16, 185, 129, 0.15), var(--shadow), 0 0 60px rgba(16, 185, 129, 0.12);
     border: 1px solid var(--border-glass);
 }
 
@@ -458,7 +458,7 @@ ul {
     bottom: -10px;
     right: -10px;
     width: 280px;
-    background: rgba(10, 14, 24, 0.85);
+    background: rgba(7, 20, 15, 0.85);
     border: 1px solid var(--border-glass);
     border-radius: 14px;
     box-shadow: var(--shadow), var(--glow);
@@ -509,7 +509,7 @@ ul {
     overflow-x: auto;
 }
 
-.code-kw { color: #fda4af; }
+.code-kw { color: #34d399; }
 .code-var { color: #f1f5f9; }
 .code-str { color: #6ee7b7; }
 
@@ -603,7 +603,7 @@ ul {
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
-    color: #06121a;
+    color: #04140d;
     box-shadow: var(--glow);
 }
 
@@ -770,7 +770,7 @@ ul {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(6, 10, 19, 0.6);
+    background: rgba(5, 16, 12, 0.6);
     color: var(--white);
     border: 2px solid rgba(255, 255, 255, 0.7);
     display: flex;
@@ -783,7 +783,7 @@ ul {
 
 .play-btn:hover {
     background: var(--gradient-accent);
-    color: #06121a;
+    color: #04140d;
     transform: translate(-50%, -50%) scale(1.1);
     box-shadow: var(--glow);
 }
@@ -952,7 +952,7 @@ ul {
 .competition-card:hover {
     transform: translateY(-8px) scale(1.02);
     border-color: var(--secondary-color);
-    box-shadow: 0 15px 40px rgba(52, 211, 153, 0.25), var(--glow);
+    box-shadow: 0 15px 40px rgba(4, 120, 87, 0.25), var(--glow);
 }
 
 .competition-card h3 {
@@ -1049,7 +1049,7 @@ ul {
     height: 12px;
     border-radius: 50%;
     background: var(--gradient-accent);
-    box-shadow: 0 0 0 4px var(--bg-color), 0 0 10px rgba(251, 113, 133, 0.5);
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 10px rgba(16, 185, 129, 0.5);
 }
 
 .edu-title {
@@ -1089,7 +1089,7 @@ ul {
 .leadership-card:hover {
     border-color: var(--secondary-color);
     transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(52, 211, 153, 0.15), var(--glow);
+    box-shadow: 0 15px 30px rgba(4, 120, 87, 0.15), var(--glow);
 }
 
 .leadership-card i {
@@ -1190,7 +1190,7 @@ ul {
     outline: none;
     border-color: var(--primary-color);
     background-color: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.15);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
 }
 
 .submit-btn {
@@ -1318,7 +1318,7 @@ footer {
         right: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: rgba(6, 10, 19, 0.98);
+        background-color: rgba(5, 16, 12, 0.98);
         backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border-glass);
         width: 100%;

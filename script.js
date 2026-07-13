@@ -216,7 +216,7 @@ if (particleCanvas && !prefersReducedMotion) {
 
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(251, 113, 133, 0.55)';
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.55)';
             ctx.fill();
         });
 
@@ -229,7 +229,7 @@ if (particleCanvas && !prefersReducedMotion) {
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(251, 113, 133, ${0.18 * (1 - dist / 130)})`;
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${0.18 * (1 - dist / 130)})`;
                     ctx.lineWidth = 1;
                     ctx.stroke();
                 }
