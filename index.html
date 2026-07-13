@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -19,14 +19,18 @@
 
 <body>
 
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">Oshadi<span>.</span></a>
+            <a href="#home" class="logo">&lt;Oshadi<span>/</span>&gt;</a>
 
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Portfolio</a></li>
                 <li><a href="#education" class="nav-link">Journey</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -40,11 +44,13 @@
 
     <!-- HERO / HOME -->
     <section id="home" class="hero fade-in">
+        <canvas id="particle-canvas" class="hero-particles"></canvas>
+
         <div class="hero-content">
+            <div class="status-badge"><span class="status-dot"></span> AI Systems Development Intern @ TaskForce AI</div>
             <p class="greeting">Hi, I'm</p>
             <h1 class="name">Oshadi Whyshni Kumaravel</h1>
-            <h2 class="tagline">Computer Science Undergraduate | 
-                <br> UI/UX & Web Developer</h2>
+            <h2 class="tagline"><span class="typing-text"></span><span class="cursor">&nbsp;</span></h2>
             <p class="intro">
                 I’m passionate about designing and developing user-friendly digital experiences.
                 I enjoy combining creativity and technology to build clean, responsive, and meaningful solutions.
@@ -60,6 +66,19 @@
         <div class="hero-img-container">
             <div class="blob-shape">
                 <img src="images/oshadi_profile.jpg" alt="Oshadi Profile Image" class="hero-img">
+            </div>
+            <div class="code-card">
+                <div class="code-card-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="code-card-title">developer.js</span>
+                </div>
+                <pre class="code-card-body"><span class="code-kw">const</span> <span class="code-var">developer</span> = {
+  name: <span class="code-str">"Oshadi Kumaravel"</span>,
+  role: <span class="code-str">"AI Systems Developer"</span>,
+  stack: [<span class="code-str">"React"</span>, <span class="code-str">"PHP"</span>, <span class="code-str">"Figma"</span>],
+  currentlyAt: <span class="code-str">"TaskForce AI"</span>,
+  loveWhatIDo: <span class="code-kw">true</span>,
+};</pre>
             </div>
         </div>
     </section>
@@ -107,17 +126,40 @@
         </div>
     </section>
 
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience section padding">
+        <div class="container fade-in">
+            <h2 class="section-title">Work <span>Experience</span></h2>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="experience-logo"><i class="fas fa-brain"></i></div>
+                    <div class="experience-heading">
+                        <h3>AI Systems Development Intern</h3>
+                        <p class="experience-company">TaskForce AI (Private) Limited</p>
+                        <p class="experience-date">2026 &ndash; Present &middot; Sri Lanka</p>
+                    </div>
+                </div>
+                <ul class="experience-list">
+                    <li>Contributing to the design and development of AI-driven systems and internal tooling as part of the TaskForce AI team.</li>
+                    <li>Supporting front-end and UI/UX work for client-facing digital products, applying the same design and development skills showcased in this portfolio.</li>
+                    <li>Collaborating with a cross-functional team on real-world software delivery, gaining hands-on industry experience alongside my Computer Science degree.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projects" class="projects section padding">
         <div class="container fade-in">
             <h2 class="section-title">My <span>Projects</span></h2>
-            
+
             <!-- Web & Mobile Development -->
             <div class="project-category">
                 <h3 class="category-title">Web & Mobile Development</h3>
                 <div class="project-grid">
-                    
-                    <div class="project-card">
+
+                    <div class="project-card fade-in">
                         <div class="video-wrapper">
                             <video class="project-media" preload="none" muted playsinline>
                                 <source src="videos/website1.mp4" type="video/mp4">
@@ -142,7 +184,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card fade-in">
                         <div class="video-wrapper">
                             <video class="project-media" preload="none" muted playsinline>
                                 <source src="videos/website2.mp4" type="video/mp4">
@@ -166,7 +208,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card fade-in">
                         <div class="video-wrapper">
                             <video class="project-media" preload="none" muted playsinline>
                                 <source src="videos/website3.mp4" type="video/mp4">
@@ -198,7 +240,7 @@
                 <h3 class="category-title">UI/UX Design</h3>
                 <div class="project-grid">
 
-                    <div class="project-card">
+                    <div class="project-card fade-in">
                         <img src="images/Figma1.png" alt="UI/UX Design 1" class="project-media">
                         <div class="project-info">
                             <h3>1. Yummilicious &ndash; Bake Shop Website UI/UX Design</h3>
@@ -218,7 +260,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card fade-in">
                         <img src="images/Figma2.png" alt="UI/UX Design 2" class="project-media">
                         <div class="project-info">
                             <h3>2. Kuveni &ndash; Mobile Application UI/UX Design</h3>
@@ -238,7 +280,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card fade-in">
                         <img src="images/Figma3.png" alt="UI/UX Design 3" class="project-media">
                         <div class="project-info">
                             <h3>3. HerSafe &ndash; Mobile Application UI/UX Design</h3>
@@ -267,22 +309,22 @@
                 <div class="project-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto;">
                     
                     <!-- Canva Image 1 -->
-                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                    <div class="project-card fade-in" style="padding: 15px; border-top: 3px solid var(--primary-color);">
                         <img src="images/poster 1.png" alt="Canva Design 1" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
                     </div>
 
                     <!-- Canva Image 2 -->
-                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                    <div class="project-card fade-in" style="padding: 15px; border-top: 3px solid var(--primary-color);">
                         <img src="images/Poster 2.png" alt="Canva Design 2" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
                     </div>
 
                     <!-- Canva Image 3 -->
-                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                    <div class="project-card fade-in" style="padding: 15px; border-top: 3px solid var(--primary-color);">
                         <img src="images/Poster 3.png" alt="Canva Design 3" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
                     </div>
 
                     <!-- Canva Image 4 -->
-                    <div class="project-card" style="padding: 15px; border-top: 3px solid var(--primary-color);">
+                    <div class="project-card fade-in" style="padding: 15px; border-top: 3px solid var(--primary-color);">
                         <img src="images/poster 4.png" alt="Canva Design 4" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block;">
                     </div>
 
@@ -391,41 +433,41 @@
 
         <div class="cert-grid">
 
-            <div class="cert-card">
+            <div class="cert-card fade-in">
                 <img src="images/python-cert.png" alt="Python Certificate" class="cert-img">
                 <h3>Python Essential Training</h3>
                 <p class="cert-provider">LinkedIn Learning</p>
                 <p>Python programming fundamentals and problem solving.</p>
             </div>
 
-            <div class="cert-card">
+            <div class="cert-card fade-in">
                 <img src="images/agile-cert.png" alt="Agile Certificate" class="cert-img">
                 <h3>PMI Agile Certified Practitioner (PMI-ACP)</h3>
                 <p class="cert-provider">LinkedIn Learning</p>
                 <p>Agile project management concepts and frameworks.</p>
             </div>
 
-            <div class="cert-card">
+            <div class="cert-card fade-in">
                 <img src="images/database-cert.png" alt="Database Certificate" class="cert-img">
                 <h3>Relational Databases Essential Training</h3>
                 <p class="cert-provider">LinkedIn Learning</p>
                 <p>Database design, tables, relationships and queries.</p>
             </div>
-            <div class="cert-card">
+            <div class="cert-card fade-in">
                 <img src="images/git-cert.png" alt="Git Essential Training Certificate" class="cert-img">
                 <h3>Git Essential Training (2023)</h3>
                 <p class="cert-provider">LinkedIn Learning</p>
                 <p>Skills: Git, Version Control, Collaboration</p>
             </div>
 
-            <div class="cert-card">
+            <div class="cert-card fade-in">
                 <img src="images/figma-basics-cert.png" alt="Figma Essential Training Certificate" class="cert-img">
                 <h3>Figma Essential Training: The Basics</h3>
                 <p class="cert-provider">LinkedIn Learning</p>
                 <p>Skills: Figma Interface Design, Layouts, UI Basics</p>
             </div>
 
-            <div class="cert-card">
+            <div class="cert-card fade-in">
                 <img src="images/figma-cert.png" alt="Figma Certificate" class="cert-img">
                 <h3>Figma for UX Design</h3>
                 <p class="cert-provider">LinkedIn Learning</p>
@@ -444,49 +486,49 @@
 
         <div class="competition-grid">
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>DESIGNATHON</h3>
                 <p>APIIT (UI Divas)</p>
                 <p><strong>1st Place</strong></p>
             </div>
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>IDEALIZE</h3>
                 <p>University of Moratuwa (PixcelCoders)</p>
                 <p><strong>Finalist</strong></p>
             </div>
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>FUTURUM 2.0</h3>
                 <p>University of Sri Jayewardenepura (Innoventrix)</p>
                 <p><strong>Finalist</strong></p>
             </div>
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>ARTEMIA 1.0</h3>
                 <p>University of Sri Jayewardenepura (UI Pixels)</p>
                 <p><strong>Finalist</strong></p>
             </div>
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>CTF</h3>
                 <p>APIIT (RedHats)</p>
                 <p>Participated</p>
             </div>
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>ENIGMA 2.0</h3>
                 <p>University of Moratuwa (TrioMatrix)</p>
                 <p>Participated</p>
             </div>
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>HACKX 10</h3>
                 <p>University of Kelaniya</p>
                 <p>Participated</p>
             </div>
 
-            <div class="competition-card">
+            <div class="competition-card fade-in">
                 <h3>24hr Hackathon</h3>
                 <p>APIIT</p>
                 <p>Participated</p>

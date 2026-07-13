@@ -1,5 +1,5 @@
 // Typing Effect for Hero Section
-const textArray = ["Computer Science Undergraduate", "Web Developer", "Graphic Designer"];
+const textArray = ["AI Systems Developer", "Computer Science Undergraduate", "UI/UX & Web Developer"];
 const typingDelay = 100;
 const erasingDelay = 100;
 const newTextDelay = 2000;
@@ -129,7 +129,7 @@ if (contactForm) {
     });
 }
 
-// Reveal Animation on Scroll
+// Reveal Animation on Scroll (staggers cards within the same grid)
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
@@ -142,6 +142,9 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
         if (!entry.isIntersecting) {
             return;
         } else {
+            const siblings = entry.target.parentElement ? Array.from(entry.target.parentElement.children) : [];
+            const staggerIndex = siblings.indexOf(entry.target);
+            entry.target.style.transitionDelay = staggerIndex > 0 ? `${Math.min(staggerIndex * 0.08, 0.4)}s` : '0s';
             entry.target.classList.add('appear');
             appearOnScroll.unobserve(entry.target);
         }
@@ -151,3 +154,104 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+
+// Scroll Progress Bar
+const scrollProgress = document.getElementById('scroll-progress');
+if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        scrollProgress.style.width = `${progress}%`;
+    });
+}
+
+// Cursor Glow (desktop only, respects reduced-motion preference)
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cursorGlow = document.getElementById('cursor-glow');
+const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+if (cursorGlow && !prefersReducedMotion && !isTouchDevice) {
+    window.addEventListener('mousemove', (e) => {
+        cursorGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        cursorGlow.style.opacity = '1';
+    });
+    window.addEventListener('mouseleave', () => {
+        cursorGlow.style.opacity = '0';
+    });
+}
+
+// Hero Particle Network
+const particleCanvas = document.getElementById('particle-canvas');
+if (particleCanvas && !prefersReducedMotion) {
+    const ctx = particleCanvas.getContext('2d');
+    const heroSection = particleCanvas.closest('.hero');
+    let particles = [];
+    const particleCount = window.innerWidth < 768 ? 25 : 55;
+
+    function resizeCanvas() {
+        particleCanvas.width = heroSection.offsetWidth;
+        particleCanvas.height = heroSection.offsetHeight;
+    }
+
+    function createParticles() {
+        particles = Array.from({ length: particleCount }, () => ({
+            x: Math.random() * particleCanvas.width,
+            y: Math.random() * particleCanvas.height,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 1.8 + 1
+        }));
+    }
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+
+        particles.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > particleCanvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > particleCanvas.height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(103, 232, 249, 0.55)';
+            ctx.fill();
+        });
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 130) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(103, 232, 249, ${0.18 * (1 - dist / 130)})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        requestAnimationFrame(drawParticles);
+    }
+
+    resizeCanvas();
+    createParticles();
+    drawParticles();
+
+    // Re-sync canvas size whenever the hero's actual box size changes
+    // (e.g. late web-font loads shifting layout), not just window resize.
+    let resizeTimeout;
+    const heroResizeObserver = new ResizeObserver(() => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            resizeCanvas();
+            createParticles();
+        }, 150);
+    });
+    heroResizeObserver.observe(heroSection);
+}
