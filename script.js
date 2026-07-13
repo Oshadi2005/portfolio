@@ -97,6 +97,38 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Click-to-play Project Videos (avoid autoplaying multiple large videos at once)
+document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+    const video = wrapper.querySelector('video');
+    const playBtn = wrapper.querySelector('.play-btn');
+
+    playBtn.addEventListener('click', () => {
+        video.controls = true;
+        video.loop = true;
+        wrapper.classList.add('playing');
+        video.play();
+    });
+
+    video.addEventListener('pause', () => wrapper.classList.remove('playing'));
+});
+
+// Contact Form (opens the visitor's email client with a pre-filled message)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+
+        const subject = `Portfolio enquiry from ${name}`;
+        const body = `${message}\n\n— ${name} (${email})`;
+
+        window.location.href = `mailto:oshadikumaravel@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+}
+
 // Reveal Animation on Scroll
 const faders = document.querySelectorAll('.fade-in');
 

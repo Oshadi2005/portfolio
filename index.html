@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Oshadi Whyshni Kumaravel — Computer Science undergraduate, UI/UX designer, and web developer based in Sri Lanka.">
     <title>Oshadi Whyshni Kumaravel | Personal Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%236B9999'/%3E%3Ctext x='32' y='43' font-family='Arial, sans-serif' font-size='34' font-weight='700' fill='%23FCFAF5' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Fonts -->
@@ -116,10 +118,13 @@
                 <div class="project-grid">
                     
                     <div class="project-card">
-                        <video class="project-media" autoplay loop muted playsinline>
-                            <source src="videos/website1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="video-wrapper">
+                            <video class="project-media" preload="none" muted playsinline>
+                                <source src="videos/website1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button class="play-btn" aria-label="Play Hospital Website demo video"><i class="fas fa-play"></i></button>
+                        </div>
                         <div class="project-info">
                             <h3>1. Hospital Website</h3>
                             <p>A responsive hospital website designed to provide users with easy access to healthcare services, doctor information, pharmacy details, and online patient registration through a clear and user-friendly interface.</p>
@@ -132,16 +137,18 @@
                                 <li style="margin-bottom: 5px;">Responsive design optimized for mobile and desktop devices</li>
                             </ul>
                             <div class="project-links" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                                <a href="videos/Website%201.mp4" target="_blank" class="btn small-btn outline-btn"><i class="fas fa-play"></i> View Demo</a>
                                 <a href="https://github.com/Oshadi2005/DOCMEDhospital" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <video class="project-media" autoplay loop muted playsinline>
-                            <source src="videos/website2.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-wrapper">
+                            <video class="project-media" preload="none" muted playsinline>
+                                <source src="videos/website2.mp4" type="video/mp4">
+                            </video>
+                            <button class="play-btn" aria-label="Play Bake Shop Ordering Website demo video"><i class="fas fa-play"></i></button>
+                        </div>
                         <div class="project-info">
                             <h3>2. Bake Shop Ordering Website</h3>
                             <p>An e-commerce style bake shop website that allows users to browse products and place orders through a responsive and user-friendly interface. The system supports dynamic interactions and order handling to enhance the user experience.</p>
@@ -154,16 +161,18 @@
                                 <li style="margin-bottom: 5px;">Modern UI design using Tailwind CSS</li>
                             </ul>
                             <div class="project-links" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                                <a href="videos/Website%202.mp4" target="_blank" class="btn small-btn outline-btn"><i class="fas fa-play"></i> View Demo</a>
                                 <a href="https://github.com/Oshadi2005/yummilicious" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <video class="project-media" autoplay loop muted playsinline>
-                            <source src="videos/website3.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-wrapper">
+                            <video class="project-media" preload="none" muted playsinline>
+                                <source src="videos/website3.mp4" type="video/mp4">
+                            </video>
+                            <button class="play-btn" aria-label="Play Yummilicious Laravel demo video"><i class="fas fa-play"></i></button>
+                        </div>
                         <div class="project-info">
                             <h3>3. Yummilicious &ndash; Bake Shop Ordering System (Laravel Project)</h3>
                             <p>A web-based bake shop ordering system developed using the Laravel framework, enabling users to manage products and place orders through a structured and secure web application.</p>
@@ -176,7 +185,6 @@
                                 <li style="margin-bottom: 5px;">Structured web application architecture</li>
                             </ul>
                             <div class="project-links" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                                <a href="videos/Website%203.mp4" target="_blank" class="btn small-btn outline-btn"><i class="fas fa-play"></i> View Demo</a>
                                 <a href="https://github.com/Oshadi2005/yummilicious-ssp2" target="_blank" class="btn small-btn outline-btn" style="border-color: var(--secondary-color); color: var(--secondary-color);"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </div>
@@ -526,18 +534,17 @@
                     </div>
                 </div>
 
-                <form class="contact-form"
-                    onsubmit="event.preventDefault(); alert('Thank you for reaching out! This is a demo form.');">
+                <form class="contact-form" id="contact-form">
                     <div class="input-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" id="contact-name" placeholder="Your Name" required>
                     </div>
 
                     <div class="input-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" id="contact-email" placeholder="Your Email" required>
                     </div>
 
                     <div class="input-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <textarea rows="5" id="contact-message" placeholder="Your Message" required></textarea>
                     </div>
 
                     <button type="submit" class="btn primary-btn submit-btn">
