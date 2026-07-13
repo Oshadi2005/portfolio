@@ -1,25 +1,25 @@
 /* Google Fonts imported via <link> in index.html (Outfit + JetBrains Mono) */
 
-/* CSS Variables — Dark Emerald "AI Systems Developer" Theme */
+/* CSS Variables — Charcoal / Teal / Navy Theme */
 :root {
-    --primary-color: #10b981;
-    --primary-light: rgba(16, 185, 129, 0.14);
-    --primary-dark: #34d399;
-    --secondary-color: #047857;
-    --secondary-light: rgba(4, 120, 87, 0.18);
-    --secondary-dark: #6ee7b7;
-    --bg-color: #05100c;
-    --bg-light: #081a13;
-    --surface: rgba(16, 185, 129, 0.07);
-    --surface-strong: rgba(16, 185, 129, 0.11);
-    --border-glass: rgba(16, 185, 129, 0.22);
-    --text-main: #cbd5cf;
-    --text-light: #85a396;
-    --heading-color: #eefcf5;
-    --white: #f8fafc;
-    --gradient-accent: linear-gradient(135deg, #047857, #10b981);
+    --primary-color: #3c6e71;
+    --primary-light: rgba(60, 110, 113, 0.16);
+    --primary-dark: #6bb0b3;
+    --secondary-color: #284b63;
+    --secondary-light: rgba(40, 75, 99, 0.2);
+    --secondary-dark: #5b8fb0;
+    --bg-color: #232323;
+    --bg-light: #353535;
+    --surface: rgba(255, 255, 255, 0.045);
+    --surface-strong: rgba(255, 255, 255, 0.08);
+    --border-glass: rgba(255, 255, 255, 0.13);
+    --text-main: #d9d9d9;
+    --text-light: rgba(217, 217, 217, 0.62);
+    --heading-color: #ffffff;
+    --white: #ffffff;
+    --gradient-accent: linear-gradient(135deg, #284b63, #3c6e71);
     --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    --glow: 0 0 45px rgba(16, 185, 129, 0.28);
+    --glow: 0 0 40px rgba(60, 110, 113, 0.3);
     --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -49,9 +49,9 @@ body::before {
     inset: 0;
     z-index: -2;
     background:
-        radial-gradient(600px circle at 15% 20%, rgba(16, 185, 129, 0.10), transparent 60%),
-        radial-gradient(700px circle at 85% 15%, rgba(4, 120, 87, 0.10), transparent 60%),
-        radial-gradient(600px circle at 50% 90%, rgba(16, 185, 129, 0.06), transparent 60%);
+        radial-gradient(600px circle at 15% 20%, rgba(60, 110, 113, 0.10), transparent 60%),
+        radial-gradient(700px circle at 85% 15%, rgba(40, 75, 99, 0.10), transparent 60%),
+        radial-gradient(600px circle at 50% 90%, rgba(60, 110, 113, 0.06), transparent 60%);
     animation: auroraShift 22s ease-in-out infinite alternate;
 }
 
@@ -118,7 +118,7 @@ ul {
     width: 0%;
     height: 3px;
     background: var(--gradient-accent);
-    box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+    box-shadow: 0 0 12px rgba(60, 110, 113, 0.6);
     z-index: 2000;
     transition: width 0.1s ease-out;
 }
@@ -133,7 +133,7 @@ ul {
     margin-left: -250px;
     margin-top: -250px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(60, 110, 113, 0.06) 0%, transparent 70%);
     pointer-events: none;
     z-index: 1;
     opacity: 0;
@@ -185,14 +185,14 @@ ul {
 
 .primary-btn {
     background: var(--gradient-accent);
-    color: #04140d;
+    color: #ffffff;
     font-weight: 600;
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25);
+    box-shadow: 0 8px 25px rgba(60, 110, 113, 0.25);
 }
 
 .primary-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(4, 120, 87, 0.35), var(--glow);
+    box-shadow: 0 15px 40px rgba(40, 75, 99, 0.35), var(--glow);
 }
 
 .secondary-btn {
@@ -203,7 +203,7 @@ ul {
 
 .secondary-btn:hover {
     background: var(--primary-color);
-    color: #04140d;
+    color: #ffffff;
     transform: translateY(-3px);
     box-shadow: var(--glow);
 }
@@ -220,7 +220,7 @@ ul {
 
 .outline-btn:hover {
     background: var(--primary-color);
-    color: #04140d;
+    color: #ffffff;
     box-shadow: var(--glow);
 }
 
@@ -231,7 +231,7 @@ ul {
     left: 0;
     width: 100%;
     padding: 20px 0;
-    background-color: rgba(5, 16, 12, 0.75);
+    background-color: rgba(35, 35, 35, 0.75);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-glass);
@@ -241,7 +241,7 @@ ul {
 
 .navbar.scrolled {
     padding: 14px 0;
-    background-color: rgba(5, 16, 12, 0.92);
+    background-color: rgba(35, 35, 35, 0.92);
 }
 
 .nav-container {
@@ -350,8 +350,8 @@ ul {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #34d399;
-    box-shadow: 0 0 8px #34d399;
+    background: #6bb0b3;
+    box-shadow: 0 0 8px #6bb0b3;
     animation: pulseDot 1.8s ease-in-out infinite;
 }
 
@@ -435,7 +435,7 @@ ul {
     justify-content: center;
     align-items: center;
     animation: morph 8s ease-in-out infinite;
-    box-shadow: inset 0 0 50px rgba(16, 185, 129, 0.15), var(--shadow), 0 0 60px rgba(16, 185, 129, 0.12);
+    box-shadow: inset 0 0 50px rgba(60, 110, 113, 0.15), var(--shadow), 0 0 60px rgba(60, 110, 113, 0.12);
     border: 1px solid var(--border-glass);
 }
 
@@ -458,7 +458,7 @@ ul {
     bottom: -10px;
     right: -10px;
     width: 280px;
-    background: rgba(7, 20, 15, 0.85);
+    background: rgba(26, 26, 26, 0.85);
     border: 1px solid var(--border-glass);
     border-radius: 14px;
     box-shadow: var(--shadow), var(--glow);
@@ -509,9 +509,9 @@ ul {
     overflow-x: auto;
 }
 
-.code-kw { color: #34d399; }
-.code-var { color: #f1f5f9; }
-.code-str { color: #6ee7b7; }
+.code-kw { color: #5b8fb0; }
+.code-var { color: #ffffff; }
+.code-str { color: #6bb0b3; }
 
 /* About Section */
 .about-content {
@@ -607,7 +607,7 @@ ul {
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
-    color: #04140d;
+    color: #ffffff;
     box-shadow: var(--glow);
 }
 
@@ -774,7 +774,7 @@ ul {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(5, 16, 12, 0.6);
+    background: rgba(35, 35, 35, 0.6);
     color: var(--white);
     border: 2px solid rgba(255, 255, 255, 0.7);
     display: flex;
@@ -787,7 +787,7 @@ ul {
 
 .play-btn:hover {
     background: var(--gradient-accent);
-    color: #04140d;
+    color: #ffffff;
     transform: translate(-50%, -50%) scale(1.1);
     box-shadow: var(--glow);
 }
@@ -956,7 +956,7 @@ ul {
 .competition-card:hover {
     transform: translateY(-8px) scale(1.02);
     border-color: var(--secondary-color);
-    box-shadow: 0 15px 40px rgba(4, 120, 87, 0.25), var(--glow);
+    box-shadow: 0 15px 40px rgba(40, 75, 99, 0.25), var(--glow);
 }
 
 .competition-card h3 {
@@ -1053,7 +1053,7 @@ ul {
     height: 12px;
     border-radius: 50%;
     background: var(--gradient-accent);
-    box-shadow: 0 0 0 4px var(--bg-color), 0 0 10px rgba(16, 185, 129, 0.5);
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 10px rgba(60, 110, 113, 0.5);
 }
 
 .edu-title {
@@ -1093,7 +1093,7 @@ ul {
 .leadership-card:hover {
     border-color: var(--secondary-color);
     transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(4, 120, 87, 0.15), var(--glow);
+    box-shadow: 0 15px 30px rgba(40, 75, 99, 0.15), var(--glow);
 }
 
 .leadership-card i {
@@ -1194,7 +1194,7 @@ ul {
     outline: none;
     border-color: var(--primary-color);
     background-color: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    box-shadow: 0 0 0 3px rgba(60, 110, 113, 0.15);
 }
 
 .submit-btn {
@@ -1322,7 +1322,7 @@ footer {
         right: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: rgba(5, 16, 12, 0.98);
+        background-color: rgba(35, 35, 35, 0.98);
         backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border-glass);
         width: 100%;
